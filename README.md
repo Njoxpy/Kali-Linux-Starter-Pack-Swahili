@@ -6,8 +6,6 @@
 Jinsi ya ku install kali linux https://www.kali.org/docs/installation/hard-disk-install/
 ______________________________________________________________________________________________________________________________________________________________
 
-Individuals interested in learning about ethical hacking and cybersecurity.
-
 **Baadhi ya commands ambazo ni za muhimu kufahamu ni zifuatazo**
 1. Nipo wapi,ili kufahamu upo wapi katika terminal yako inabidi kuingiza command ya
 ```
