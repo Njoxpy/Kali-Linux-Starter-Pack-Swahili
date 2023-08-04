@@ -1,7 +1,17 @@
 # Kali-Linux-Starter-Pack-Swahili
 **Maelekezo ya baadhi ya vitu vya muhimu inabidi ufahamu kama unatumia Kali linux,hii introduction ina assume kwamba ume install tayari Linux OS kwenye pc yako,kama bado unaweza pitia tutorial kujua kwa namna gani unaweza ku install**
 
+[Target Audience](#target-audience)
+
 Jinsi ya ku install kali linux https://www.kali.org/docs/installation/hard-disk-install/
+______________________________________________________________________________________________________________________________________________________________
+
+## Target Audience
+
+This guide is designed for:
+
+- Beginners with little or no experience in using Kali Linux or other penetration testing tools.
+- Individuals interested in learning about ethical hacking and cybersecurity.
 
 **Baadhi ya commands ambazo ni za muhimu kufahamu ni zifuatazo**
 1. Nipo wapi,ili kufahamu upo wapi katika terminal yako inabidi kuingiza command ya
