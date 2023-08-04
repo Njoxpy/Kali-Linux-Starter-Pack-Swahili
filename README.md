@@ -11,14 +11,20 @@ pwd
 Hi itakupa maelekezo kama upo kwenye root au kama normal user,na kwa upande wa normal user unaweza uakwa katika desktop au sehemu nyingine
 
 2. Whoami/Mimi ni nani,kama ilivyo katika linux kuna user wa aina tatu supersuser,group na other user,basi ilikuweza kujua umeingia kama inabidi kutumia command ya
-   ```whoami```
+```
+whoami
+```
     hii ni ambavyo itakwambia wewe ni kama normal user au kama root
 **NOTE:Kama umeingia kwenye terminal kama normal user italeta normal ila kama umetumia Root terminal emulator itaonesha kama root
 4. Kubadili directory(ni sawa na folder katika linux) directory inasimama kama cd kwenye Kali Linux na Ubuntu pia
    Kwenye kubadili directory yaani kutoka folder moja kwenda foledr jingine inabidi ujue kwamba upo wapi kwa kutumia
-   ```pwd```
+```
+pwd
+```
    command kumbuka upande wa cd lazima ujue unataka kwenda wapi,basi utaanza na command ```cd``` then followed na sehemu ambayo unaenda kama ni home dfirectory itakua
-    ```cd ~```
+```
+cd ~
+```
     kama desktop itakua ni
    ```cd Desktop```
     ,ili kurudi ulikotoka then tumia ```cd ..```
@@ -53,15 +59,24 @@ hii inasimama kama list hapa iatkupa vitu vilivyomo katika directory yako
       ```rm filename```
 
 11. Kutengeneza directory,utaanza na keyword(mkdir-make a directory) ikifuatiwa na jina la directory yako,mfano
-    ```mkdir newDirectory```
+```
+mkdir newDirectory
+```
     -Kufuta directory(folder)
-    ```mkdir directoryName```
+```
+mkdir directoryName
+```
 
-12. Copying file,ili uweze ku copy file kutoka sehemu moja kwenda nyingine inabdi ujue kwanza una copy file lako kutoka wapi kwenda wapi,keyword inayotumika hapa cp ikimaanisha ni copy.
-     ```cp fileLaZamani fileJipya```
+13. Copying file,ili uweze ku copy file kutoka sehemu moja kwenda nyingine inabdi ujue kwanza una copy file lako kutoka wapi kwenda wapi,keyword inayotumika hapa cp ikimaanisha ni copy.
+```
+cp fileLaZamani fileJipya
+```
 
-13. Renaming file(Kubadili jina),kwa bahati nzuri ni kwamba katika Kali huwezi ku rename file moja kwa moja ila command ambayo inatumika ni mv(move) kwa hito tunatoa lile file kutoka sehemu moja kwenda sehemu nyingine
-      ```mv oldfile newfile```
+14. Renaming file(Kubadili jina),kwa bahati nzuri ni kwamba katika Kali huwezi ku rename file moja kwa moja ila command ambayo inatumika ni mv(move) kwa hito tunatoa lile file kutoka sehemu moja kwenda sehemu nyingine
+    
+```
+mv oldfile newfile
+```
     
 
 
