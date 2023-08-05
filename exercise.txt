@@ -1,6 +1,9 @@
 Use the ls command from the root (/) directory to explore the directory structure ofhttps Linux. Move to each of the directories with the cd command and run pwd to verify whereyou are in the directory structure.
-Use the whoami command to verify which user you are logged in as.
+
+Use the whoami command to verify which user you are logged in as
+
 Use the locate command to find wordlists that can be used for password cracking.
+
 Use the cat command to create a new file and then append to that file. Keep in mindthat > redirects input to a file and >> appends to a file.
 
 Create a new directory called hackerdirectory and create a new file in that directory named hackedfile. Now copy that file to your /root directory and rename it secretfile.
