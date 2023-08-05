@@ -1,0 +1,23 @@
+1. Use the ls command from the root (/) directory to explore the directory structure ofhttps Linux. Move to each of the directories with the cd command and run pwd to verify whereyou are in the directory structure.
+2. Use the whoami command to verify which user you are logged in as.
+3. Use the locate command to find wordlists that can be used for password cracking.
+4. Use the cat command to create a new file and then append to that file. Keep in mind
+that > redirects input to a file and >> appends to a file.
+5. Create a new directory called hackerdirectory and create a new file in that directory named
+hackedfile. Now copy that file to your /root directory and rename it secretfile.
+6. How do you check your current location in the terminal?
+7. What command do you use to find out your username (user) in Linux?
+8. What is the difference between using cd and cd .. in the terminal?
+9. How do you list the contents of a directory (folder) in Linux?
+10. How can you see hidden files and directories in a Linux system?
+11. Explain the difference between ls -la and ls -l commands.
+12. What command do you use to get help when you are stuck in the terminal?
+13. How do you find detailed information about a specific command in Linux?
+14. What are the two commands that can be used to search for files or directories in the system, and what is the difference between them?
+15. How do you create a new file using the terminal?
+16. How do you delete a file using the terminal?
+17. How do you create a new directory (folder) using the terminal?
+18. How do you delete a directory (folder) using the terminal?
+19. Explain the process of copying a file from one location to another in Linux.
+20. How do you rename a file in Linux using the terminal?
+
