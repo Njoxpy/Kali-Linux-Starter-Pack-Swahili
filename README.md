@@ -1,10 +1,23 @@
 # Kali-Linux-Starter-Pack-Swahili
-**Maelekezo ya baadhi ya vitu vya muhimu inabidi ufahamu kama unatumia Kali linux,hii introduction ina assume kwamba ume install tayari Linux OS kwenye pc yako,kama bado unaweza pitia tutorial kujua kwa namna gani unaweza ku install**
 
+# Getting Started with Kali Linux
+
+![Kali Linux Logo](kali.png)
+
+Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kujua baadhi ya commands muhimu ambazo hauna budi kufahamu kama mtumiaji wa kali Linux kwa Beginners kabisa,Kali linux inatumika katika shughuli mbalimbali kama katika kwenye penetration testing na ethical hacking,ila hii repository ni kwa mtu yoyote anayeanza kutumia Kali Linux.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Target Audience](#target-audience)
+- [Kupata Msaada](#Kupata-Msaada)
+- [Scope](#scope)
+- [Content Types](#content-types)
+- [Contributing](#contributing)
+- [License](#license)
 
 
 Jinsi ya ku install kali linux https://www.kali.org/docs/installation/hard-disk-install/
-______________________________________________________________________________________________________________________________________________________________
 
 **Baadhi ya commands ambazo ni za muhimu kufahamu ni zifuatazo**
 1. Nipo wapi,ili kufahamu upo wapi katika terminal yako inabidi kuingiza command ya
