@@ -65,7 +65,16 @@ Hi repository itahusisha vitu vifuatavyo(content):
 
 ## pwd
 
-1. Finding Yourself with pwd:Kama upo kwenye directory mfano desktop ili kufahamu tunatumia keyword ya pwd
+1. Finding Yourself with pwd:Kama upo kwenye directory mfano desktop ili kufahamu tunatumia keyword ya pwd kirefu cha pwd ni print working directory,inamaana uki prompt
+ ```
+ pwd
+ ```
+
+ output utakayo pata ni kutokana na directory uliyopo kama upo home directory italeta 
+
+ ``
+ /home/username
+ ``
 
 ```
 pwd
@@ -134,6 +143,52 @@ Output
 `drwxr-xr-x  2 godbless godbless  4096 Aug  5 21:55  Njox`
 
 hiyo ya kwanza ni persmission,links,directory,directory,size katika bytes,date ambayo imekua modofied au created na mda,jina la directory
+directory contents
+
+ls -la (display all files including hidden files in long listing format)
+-a displays hidden files katika directory uliyopo,hidden files huwa zinaanza na . au .. symbol
+jaribu hii katijka home directroy,linux huwa ina ignore file zinazo anza na . au .. hivyo uki prompt
+ls -la,kitachotokea ni kwamba files zinazoanza na .. na . hazitakuwa ignored
+
+```
+ls -la
+```
+
+la = long-listing -l + -a(display hidden files)
+-l diplays files katika long listing na details ambazo zinakuwa displayed zinaitwa metadata,mfano wa metadata ni file type,permission,links,size,file name
+
+**Why are files hidden in linux**
+
+- clean and organized directory
+- Privacy and security
+- user interface consistency
+  unaweza kufuatilia vizuri hapa >>
+- Kama unataka kudisplay content zote zlizopo katika kila directory na sub directoris tumia
+
+
+    ```
+    ls -R
+    ```
+    NOTE:Kuwa makini sana unavyo tumia ls -R kwenye root itachukua mda mrefu sana na kama itakuwa connected na usb au dvd inabidi itoe list ya vitu vyote vilivyomo humo,pia jitahidi kuwa specific kama unataka ku display contents zote na subdirectoris zilizopo katika /bin tumia
+
+    ```
+    ls -Rl /bin
+    ```
+
+    ## Sorting contents by by size
+    Ili uweze ku sort contents kutokana na size tunatumia
+    ```
+    -S
+    ``
+    Kumbuka Linux ni case sensitive kwa hiyo ukitumia -s utapata kitu kingine,hivyo ili uweze ku sort files zako kutokana na size tumia -S,item zitakuwa sorted from largest to lowest size
+    ```
+    ls -S
+    ``
+    mara nyingi -S huwa inaenda vizuri ikiwa combined na -l mfano
+    ```
+    ls -lS
+    ```
+
 
 ## Finding Stuffs
 
