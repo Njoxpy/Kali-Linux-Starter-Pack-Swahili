@@ -181,12 +181,14 @@ la = long-listing -l + -a(display hidden files)
     Ili uweze ku sort contents kutokana na size tunatumia
     ```
     -S
-    ``
+    ```
     Kumbuka Linux ni case sensitive kwa hiyo ukitumia -s utapata kitu kingine,hivyo ili uweze ku sort files zako kutokana na size tumia -S,item zitakuwa sorted from largest to lowest size
+    
     ```
     ls -S
     ``
     mara nyingi -S huwa inaenda vizuri ikiwa combined na -l mfano
+  
     ```
     ls -lS
     ```
