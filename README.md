@@ -6,6 +6,8 @@
 
 Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kujua baadhi ya commands muhimu ambazo hauna budi kufahamu kama mtumiaji wa kali Linux kwa Beginners kabisa,Kali linux inatumika katika shughuli mbalimbali kama katika kwenye penetration testing na ethical hacking,ila hii repository ni kwa mtu yoyote anayeanza kutumia Kali Linux.
 
+![Kali Logo](https://www.kali.org/images/kali-dragon-icon.svg) 
+
 ## Table of Contents
 
 - [Introduction](#introduction)
