@@ -29,6 +29,13 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
       - [Renaming File](#renaming-file)
       - [Removing File](#removing-file)
       - [Removing Directory](#removing-directory)
+  7. - - [Controlling Permissions](#controlling-permissions)
+  - [Aina Za Users](#aina-za-users)
+  - [Granting Permissions](#granting-permissions)
+  - [Checking Permissions](#checking-permissions)
+  - [Changing Permissions](#changing-permissions)
+  - [Granting Ownership to an Individual User](#granting-ownership-to-an-individual-user)
+  
 - [Kupata Msaada](#kupata-msaada)
   1.  [Using Help](#using-help)
   2.  [Using Manual](#using-manual)
@@ -334,6 +341,96 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
    ```
    rmdir directoryName
    ```
+
+   ## Controlling Permissions
+
+Kujua namna gani unaweza control file zako na directory kwenye Linux ni muhimu,hivyo kama Linux user unaweza kuficha au kutoruhusu other user kufungua faili zako.
+Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w) na execute(x)
+
+## Aina Za Users
+
+- Kuna aina tatu tu za user katika Li ux fi;lesystem,kama ifuatavyo.
+
+1.  owner (u):Huyu ndiye mmiliki wa kila kitu yani kama mtu mwenye funguo za kufunga na kufungua kila sehemu.
+2.  group (g):Mmiliki anaweza ku cooperate na group fulani la watu ila yeye ndio atatoa access kwa watu ili waweze kuingia sehemu husika.
+3.  other users (o)
+
+## Granting Permissions
+
+- Ili uweze kutoa permission katika Linux ni muhimu kufahamu kuwa permission gani unataka kutoa access inaweza iakwa kwa group au others na hata pia kwako.Kuna aina tatu za permission katika system ambazo ni
+  - read(r):Permission to read,hii inakupa uwezo wa kufungua na kuangalia faili tu.
+  - write(w):Permission to write,uwezo wa kufungua file na edit file.
+  - execute(x):Permission to execute(run),uwezo wa kurun file ila sio lazima kuview au ku edit
+- By default file likiwa created katika Linux owner wa lile file ndio anakuwa uwezo wa kubadili vitu kwenye lile file.
+
+  ## Checking Permissions
+
+  - Kabla ya kubadili permission zako katika file lako au directory ni lazima ujue kwanza permissions zipi zipo kwenye file lako na permissons zipi hazipo na kwa user yupi zipo na yupi hazipo pia lazima ujue katika file lipi unataka kuangalia permissions hizo.
+  - Ili uweze kuangalia permissions katika Linux lazima kutumia long listing method katika sehemu ambayo unataka kuangalia hilo file lako.
+    Mfano: nitatumia home directory kuangalia permissions zilizopo
+
+  ```
+  ls –l
+  ```
+
+  hivyo output nitakayo pata ni
+  `  total 2
+  drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela 
+ `
+
+  Katika kila line hapo unapata information kuhusu file lako au directory.
+  Total ina indicate idadi ya file zilizopo kwenye home directory
+
+  1. Herufi ya kwanza kama ni d ina indicate kwamba ni directory(folder) ila kama inaanza na - (dash) ina indicate file.
+
+  2. Permissions za file,kuanzia owner(user),group na other users(o).Kumbuka permsiions zipo katika order owner,group,users. **rwxr-xr-x\*
+     Upande wa permissions zipo katika category tatu ambazo ni - owner **rwxr*,x ina maana kwamba owner ana uwezo wa ku read(r), write(w) na ku execute(x) - group \*\*-xr*,group amepewa access ya ku execute na read. - user(others) \*_-x_, other amepewa uwezo wa ku execute basi.
+
+  3. Number of links. \*_4_
+
+  4. Owner wa hilo faili/Folder:Mmiliki wa hilo file owner kwa hapo owner ni choupo \*_choupo choupo_
+
+  5. Size la hilo file:Katika linux file zinakuwa katika bytes \*_4096_
+
+  6. Mda gani kali linmekuwa created au modified \*_Aug 10 00:20_
+
+  7. Jina la file au directroy ambalo hapo ni \*_Angela_
+
+  ## Granting Ownership to an Individual User
+
+  - Kuna mda kuna uhitaji wa kumpa access ya file lako wa individual user fulani,ili kufanikisha hilo tumia chown command ikifuatiwa na user ambaye unataka kumpa access na file ambalo unataka kutoa access.
+
+  ```
+  chown njox /usr/njoxfile
+  ```
+
+  ## Changing Permissions
+
+  - Kubadili permissions kwenye Linux, unaweza kutumia chmod command.chmod command inachukua digits (tarakimu) tatu kama argument,argument ya kwanza inamaanisha settings kwa owner,ya pili kwa group na ya tatu kwa others katika mfuatano.
+
+  - Kila didgit ni sum ya vitu vifuatavyo:
+
+    - 4 kwa ajili ya read permission
+    - 2 kwa ajili ya write permission
+    - 1 kwa ajili ya execute permission
+      Mfano,ili tumpe owner uwezo wa ku read and write permissions,group uwezo wa kuread na others no permission,tutafanya hivi:
+
+    ```
+    chmod 640 filename
+    ```
+
+    Hapa tunampa owner uwezo wa read na ku write (4+2=6),group permissions to read(4),and other permissions kuwa none(hakuna (0))
+
+    Ili uweze ku add au remove permissions tumia + au - symbols kabla ya digits.
+    Mfano,kuweka permssion kwa owner ili aweze execute, unaweza kutumia:
+
+    ```
+    chmod u+x filename
+    ```
+
+    Hapa "u" inasimama badala ya "user" ambaye ni owner na "+x" in add execute permissio kwa user wetu (owner)
+    **NOTE**Katika kuweka permission u inamaana kwamba ni user ambaye ni owner na sio \*_other_ na group ni "g" ila kwa others ni "o".
+
 
 ## Kupata Msaada
 
