@@ -2,17 +2,16 @@
 
 # Getting Started with Kali Linux
 
-
-
 Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kujua baadhi ya commands muhimu ambazo hauna budi kufahamu kama mtumiaji wa kali Linux kwa Beginners kabisa,Kali linux inatumika katika shughuli mbalimbali kama katika kwenye penetration testing na ethical hacking,ila hii repository ni kwa mtu yoyote anayeanza kutumia Kali Linux.
 
-![Kali Logo](https://www.kali.org/images/kali-dragon-icon.svg) 
+![Kali Logo](https://www.kali.org/images/kali-dragon-icon.svg)
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Target Audience](#target-audience)
 - [Basic Commands](#basic-commands)
+
   1.  [pwd](#pwd)
   2.  [Checking Login](#checking-login)
   3.  [Changing Directory](#changing-directory)
@@ -29,13 +28,18 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
       - [Renaming File](#renaming-file)
       - [Removing File](#removing-file)
       - [Removing Directory](#removing-directory)
-  7. - - [Controlling Permissions](#controlling-permissions)
+  7.  [Controlling Permissions](#controlling-permissions)
+
   - [Aina Za Users](#aina-za-users)
   - [Granting Permissions](#granting-permissions)
   - [Checking Permissions](#checking-permissions)
   - [Changing Permissions](#changing-permissions)
   - [Granting Ownership to an Individual User](#granting-ownership-to-an-individual-user)
-  
+
+  8. [Kufungua File](#kufungua-file)
+  9. [Kuangalia Historia](#kuangalia-historia)
+  10. [Kubadili Msimbo](#kubadili-msimbo)
+
 - [Kupata Msaada](#kupata-msaada)
   1.  [Using Help](#using-help)
   2.  [Using Manual](#using-manual)
@@ -75,15 +79,14 @@ Hi repository itahusisha vitu vifuatavyo(content):
 ## pwd
 
 1. Finding Yourself with pwd:Kama upo kwenye directory mfano desktop ili kufahamu tunatumia keyword ya pwd kirefu cha pwd ni print working directory,inamaana uki prompt
- ```
- pwd
- ```
 
- output utakayo pata ni kutokana na directory uliyopo kama upo home directory italeta 
+```
+pwd
+```
 
- ``
- /home/username
- ``
+output utakayo pata ni kutokana na directory uliyopo kama upo home directory italeta
+
+`/home/username`
 
 ```
 pwd
@@ -174,32 +177,38 @@ la = long-listing -l + -a(display hidden files)
   unaweza kufuatilia vizuri hapa >>
 - Kama unataka kudisplay content zote zlizopo katika kila directory na sub directoris tumia
 
+  ```
+  ls -R
+  ```
 
-    ```
-    ls -R
-    ```
-    NOTE:Kuwa makini sana unavyo tumia ls -R kwenye root itachukua mda mrefu sana na kama itakuwa connected na usb au dvd inabidi itoe list ya vitu vyote vilivyomo humo,pia jitahidi kuwa specific kama unataka ku display contents zote na subdirectoris zilizopo katika /bin tumia
+  NOTE:Kuwa makini sana unavyo tumia ls -R kwenye root itachukua mda mrefu sana na kama itakuwa connected na usb au dvd inabidi itoe list ya vitu vyote vilivyomo humo,pia jitahidi kuwa specific kama unataka ku display contents zote na subdirectoris zilizopo katika /bin tumia
 
-    ```
-    ls -Rl /bin
-    ```
+  ```
+  ls -Rl /bin
+  ```
 
-    ## Sorting contents by by size
-    Ili uweze ku sort contents kutokana na size tunatumia
-    ```
-    -S
-    ```
-    Kumbuka Linux ni case sensitive kwa hiyo ukitumia -s utapata kitu kingine,hivyo ili uweze ku sort files zako kutokana na size tumia -S,item zitakuwa sorted from largest to lowest size
-    
-    ```
-    ls -S
-    ``
-    mara nyingi -S huwa inaenda vizuri ikiwa combined na -l mfano
-  
-    ```
-    ls -lS
-    ```
+  ## Sorting contents by by size
 
+  Ili uweze ku sort contents kutokana na size tunatumia
+
+  ```
+  -S
+  ```
+
+  Kumbuka Linux ni case sensitive kwa hiyo ukitumia -s utapata kitu kingine,hivyo ili uweze ku sort files zako kutokana na size tumia -S,item zitakuwa sorted from largest to lowest size
+
+  ```
+  ls -S
+  ``
+  mara nyingi -S huwa inaenda vizuri ikiwa combined na -l mfano
+
+  ```
+
+  ls -lS
+
+  ```
+
+  ```
 
 ## Finding Stuffs
 
@@ -210,11 +219,12 @@ la = long-listing -l + -a(display hidden files)
 - Hapa kuna command kama mbili zinazotumika katika sytem yako command ya kwanza ni **locate**
   unaanza na keyword ya locate folowed by the file you want to search kwa hiyo,kitakacho fanyika ni system kuenda kunagalia kama hiloneno au foklder lipo kwenye entire file sytem
 - Njia nyepesi ya kutafuta kitu chochote kwa linux ni kutumia locate command ial shida ya locate command ni kwamba itakupa karibia kila kitu kilichopo katika system kwenye stystem kwahiyo unakuta unakuwa confused,kutumia locate anza na locate keyword ikifuatiwa na neno ambalo unataka kutafuta
+
 ```
 locate wifi
 ```
-Kwahiyo utakuta unaletewa majibu mengi mno.
 
+Kwahiyo utakuta unaletewa majibu mengi mno.
 
 ## Find
 
@@ -342,17 +352,17 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
    rmdir directoryName
    ```
 
-   ## Controlling Permissions
+## Controlling Permissions
 
 Kujua namna gani unaweza control file zako na directory kwenye Linux ni muhimu,hivyo kama Linux user unaweza kuficha au kutoruhusu other user kufungua faili zako.
 Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w) na execute(x)
 
 ## Aina Za Users
 
-- Kuna aina tatu tu za user katika Li ux fi;lesystem,kama ifuatavyo.
+- Kuna aina tatu tu za user katika Linux fi;lesystem,kama ifuatavyo.
 
-1.  owner (u):Huyu ndiye mmiliki wa kila kitu yani kama mtu mwenye funguo za kufunga na kufungua kila sehemu.
-2.  group (g):Mmiliki anaweza ku cooperate na group fulani la watu ila yeye ndio atatoa access kwa watu ili waweze kuingia sehemu husika.
+1.  owner (u): Huyu ndiye mmiliki wa kila kitu yani kama mtu mwenye funguo za kufunga na kufungua kila sehemu.
+2.  group (g): Mmiliki anaweza ku cooperate na group fulani la watu ila yeye ndio atatoa access kwa watu ili waweze kuingia sehemu husika.
 3.  other users (o)
 
 ## Granting Permissions
@@ -374,9 +384,8 @@ Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w)
   ```
 
   hivyo output nitakayo pata ni
-  `  total 2
-  drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela 
- `
+  `total 2
+drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
   Katika kila line hapo unapata information kuhusu file lako au directory.
   Total ina indicate idadi ya file zilizopo kwenye home directory
@@ -431,6 +440,51 @@ Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w)
     Hapa "u" inasimama badala ya "user" ambaye ni owner na "+x" in add execute permissio kwa user wetu (owner)
     **NOTE**Katika kuweka permission u inamaana kwamba ni user ambaye ni owner na sio \*_other_ na group ni "g" ila kwa others ni "o".
 
+## Kufungua File
+
+- Kupitia open command utaweza kufungua faili lako ila utatumia sintaksia ifuatayo.
+  `   open <jinaLaFaili>
+`
+
+  Pia kwenye file hilo unaweza kufungua current directory kwenye terminal yako kwa kutumia komandi hii
+
+  ```
+  open .
+  ```
+
+  Kupitia kommandi hii utaweza kufungua current directory kwenye kifaa chako kwa mfano nipo katika directory la desktop ambalo nilifungua kwa kutumia
+
+  ```
+  cd Desktop
+  ```
+
+  Ili kuweza kufungua current directory kwenye folder hilo utatumia komandi
+
+  ```
+  open .
+  ```
+
+  Alama ya . (period sign) ina point kwenye current directory kama ambavyo .. inapoint kwenye parent directory.
+
+## Kuangalia Historia
+
+Kila mda unapo run command yoyote katika terminal yako inahifadhiwa,ili kuweza kuangalia historia ya komandi zako utatumia command ifuatayo
+
+```
+history
+```
+
+Ukisha run command hiyo uta list ya command ulizorun ili zitakuwa katika namba kuanzia moja hadi
+
+## Kubadili Msimbo
+
+Password kwa jina wanaita msimbo,hivyo kupitia komandi ya
+
+```
+passwd
+```
+
+Utaweza kubadili msimbo kwenye simu yako uki prompt command ya passwd kwenye terminal itakuuliza current passowrd ambayo iloko kwenye device yako baada ya kujaza itakuaja new password sugestion ambayo unataka kuweka kwenye device yako.
 
 ## Kupata Msaada
 
