@@ -6,47 +6,64 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
 
 ![Kali Logo](https://www.kali.org/images/kali-dragon-icon.svg)
 
+<a name="top"></a>
+
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Target Audience](#target-audience)
-- [Basic Commands](#basic-commands)
-
-  1.  [pwd](#pwd)
-  2.  [Checking Login](#checking-login)
-  3.  [Changing Directory](#changing-directory)
-  4.  [Directory Contents](#directory-contents)
-  5.  [Finding Stuffs](#finding-stuffs)
-      - [Locate](#locate)
-      - [Find](#find)
-  6.  [Modifying Files and directories](#modifying-files-and-directories)
-      - [Creating File](#creating-file)
-      - [Concatenating File](#concatenating-file)
-      - [Kutengeneza File](#kutengeneza-file)
-      - [Kutengeneza Directory](#kutengeneza-directory)
-      - [Kucopy File](#kucopy-file)
-      - [Renaming File](#renaming-file)
-      - [Removing File](#removing-file)
-      - [Removing Directory](#removing-directory)
-  7.  [Controlling Permissions](#controlling-permissions)
-
+- [Kali-Linux-Starter-Pack-Swahili](#kali-linux-starter-pack-swahili)
+- [Getting Started with Kali Linux](#getting-started-with-kali-linux)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Target Audience](#target-audience)
+  - [Scope](#scope)
+  - [Content Types](#content-types)
+  - [Basic Commands](#basic-commands)
+  - [pwd](#pwd)
+  - [Checking Login](#checking-login)
+  - [Changing Directory](#changing-directory)
+  - [Directory Contents](#directory-contents)
+  - [Sorting contents by by size](#sorting-contents-by-by-size)
+  - [Finding Stuffs](#finding-stuffs)
+  - [Locate](#locate)
+  - [Find](#find)
+  - [Whereis](#whereis)
+  - [Modifying Files and directories](#modifying-files-and-directories)
+  - [Creating File](#creating-file)
+  - [Concatenating File](#concatenating-file)
+  - [Kutengeneza File](#kutengeneza-file)
+  - [Kutengeneza Directory](#kutengeneza-directory)
+  - [Kucopy File](#kucopy-file)
+  - [Renaming File](#renaming-file)
+  - [Removing File](#removing-file)
+  - [Removing Directory](#removing-directory)
+  - [Controlling Permissions](#controlling-permissions)
   - [Aina Za Users](#aina-za-users)
   - [Granting Permissions](#granting-permissions)
   - [Checking Permissions](#checking-permissions)
-  - [Changing Permissions](#changing-permissions)
   - [Granting Ownership to an Individual User](#granting-ownership-to-an-individual-user)
+  - [Changing Permissions](#changing-permissions)
+  - [Kufungua File](#kufungua-file)
+  - [Kuangalia Historia](#kuangalia-historia)
+  - [Kubadili Msimbo](#kubadili-msimbo)
+  - [Kupata Msaada](#kupata-msaada)
+  - [Writting Shell Scripts](#writting-shell-scripts)
+  # Bash Scripting
 
-  8. [Kufungua File](#kufungua-file)
-  9. [Kuangalia Historia](#kuangalia-historia)
-  10. [Kubadili Msimbo](#kubadili-msimbo)
-
-- [Kupata Msaada](#kupata-msaada)
-  1.  [Using Help](#using-help)
-  2.  [Using Manual](#using-manual)
-  3.  [Using Documentation](#using-documentation)
-- [Scope](#scope)
-- [Content Types](#content-types)
-- [Contributing](#contributing)
+- [Introduction to Bash Scripting](#introduction-to-bash-scripting)
+- [Getting Started with Bash](#getting-started-with-bash)
+- [Variables and Expressions](#variables-and-expressions)
+- [Control Flow](#control-flow)
+- [Functions in Bash](#functions-in-bash)
+- [File Operations](#file-operations)
+- [Text Processing](#text-processing)
+- [Error Handling](#error-handling)
+- [Advanced Topics](#advanced-topics)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+  - [Using Help](#using-help)
+  - [Using Manual](#using-manual)
+  - [Using Documentation](#using-documentation)
+  - [Contributing](#contributing)
 
 ## Introduction
 
@@ -108,6 +125,8 @@ hii ni ambavyo itakwambia wewe ni kama normal user au kama root
 
 **Navigating the linux file system**
 
+[⬆️ Return to Top](#top)
+
 ## Changing Directory
 
 3. Changing directory/Kubadili directory.Directory katika linux ni sawa na folder katika windows,kama mtumiaji wa linux inabidi kujua jinsi ya kutoka kwenye directory moja kwenda directory nyingine.Kutoka directory hiyo kwenda nyingine utatumia cd keyword followed na sehemu ambayo unataka kwenda kama ni desktop itakua.
@@ -127,6 +146,8 @@ Kwenda kwenye home directory utatumia
 ```
 cd ~
 ```
+
+[⬆️ Return to Top](#top)
 
 ## Directory Contents
 
@@ -210,6 +231,8 @@ la = long-listing -l + -a(display hidden files)
 
   ```
 
+  [⬆️ Return to Top](#top)
+
 ## Finding Stuffs
 
 5. Kutafuta content fulani au directory katika system yako
@@ -225,6 +248,8 @@ locate wifi
 ```
 
 Kwahiyo utakuta unaletewa majibu mengi mno.
+
+[⬆️ Return to Top](#top)
 
 ## Find
 
@@ -352,6 +377,8 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
    rmdir directoryName
    ```
 
+   [⬆️ Return to Top](#top)
+
 ## Controlling Permissions
 
 Kujua namna gani unaweza control file zako na directory kwenye Linux ni muhimu,hivyo kama Linux user unaweza kuficha au kutoruhusu other user kufungua faili zako.
@@ -413,6 +440,8 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
   chown njox /usr/njoxfile
   ```
 
+  [⬆️ Return to Top](#top)
+
   ## Changing Permissions
 
   - Kubadili permissions kwenye Linux, unaweza kutumia chmod command.chmod command inachukua digits (tarakimu) tatu kama argument,argument ya kwanza inamaanisha settings kwa owner,ya pili kwa group na ya tatu kwa others katika mfuatano.
@@ -440,11 +469,12 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
     Hapa "u" inasimama badala ya "user" ambaye ni owner na "+x" in add execute permissio kwa user wetu (owner)
     **NOTE**Katika kuweka permission u inamaana kwamba ni user ambaye ni owner na sio \*_other_ na group ni "g" ila kwa others ni "o".
 
+    [⬆️ Return to Top](#top)
+
 ## Kufungua File
 
 - Kupitia open command utaweza kufungua faili lako ila utatumia sintaksia ifuatayo.
-  `   open <jinaLaFaili>
-`
+  `  open <jinaLaFaili>`
 
   Pia kwenye file hilo unaweza kufungua current directory kwenye terminal yako kwa kutumia komandi hii
 
@@ -466,6 +496,8 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
   Alama ya . (period sign) ina point kwenye current directory kama ambavyo .. inapoint kwenye parent directory.
 
+  [⬆️ Return to Top](#top)
+
 ## Kuangalia Historia
 
 Kila mda unapo run command yoyote katika terminal yako inahifadhiwa,ili kuweza kuangalia historia ya komandi zako utatumia command ifuatayo
@@ -475,6 +507,8 @@ history
 ```
 
 Ukisha run command hiyo uta list ya command ulizorun ili zitakuwa katika namba kuanzia moja hadi
+
+[⬆️ Return to Top](#top)
 
 ## Kubadili Msimbo
 
@@ -486,9 +520,43 @@ passwd
 
 Utaweza kubadili msimbo kwenye simu yako uki prompt command ya passwd kwenye terminal itakuuliza current passowrd ambayo iloko kwenye device yako baada ya kujaza itakuaja new password sugestion ambayo unataka kuweka kwenye device yako.
 
+[⬆️ Return to Top](#top)
+
 ## Kupata Msaada
 
 **Kufahamu sehemu gani umekwama kama mtuamiaji wa Kali Linux ni muhimu sana**
+
+## Introduction to Bash Scripting
+
+## Getting Started with Bash
+
+## Variables and Expressions
+
+## Control Flow
+
+## Functions in Bash
+
+## File Operations
+
+## Text Processing
+
+## Error Handling
+
+## Advanced Topics
+
+## Best Practices
+
+## Common Pitfalls
+
+## Writting Shell Scripts
+
+```sh
+#!/bin/bash
+# This is our first script.
+echo 'Hello World!'
+```
+
+[⬆️ Return to Top](#top)
 
 ## Using Help
 
@@ -531,3 +599,5 @@ Kama unawazo au maoni na kutaka kuchangia kuhusu hii repository! unakaribishwa k
 ---
 
 Natumaini hii repository ni muhimu kwako. Nakutakia utendaji mwema na usomaji mwema wa Kali Linux
+
+[⬆️ Return to Top](#top)
