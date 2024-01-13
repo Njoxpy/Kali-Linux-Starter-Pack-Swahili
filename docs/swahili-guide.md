@@ -43,25 +43,12 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
   - [Checking Permissions](#checking-permissions)
   - [Granting Ownership to an Individual User](#granting-ownership-to-an-individual-user)
   - [Changing Permissions](#changing-permissions)
+  - [Compression adn Archiving](#)
   - [Kufungua File](#kufungua-file)
   - [Kuangalia Historia](#kuangalia-historia)
   - [Kubadili Msimbo](#kubadili-msimbo)
   - [Kupata Msaada](#kupata-msaada)
-  - [Writting Shell Scripts](#writting-shell-scripts)
-  # Bash Scripting
-
-- [Introduction to Bash Scripting](#introduction-to-bash-scripting)
-- [Getting Started with Bash](#getting-started-with-bash)
-- [Variables and Expressions](#variables-and-expressions)
-- [Control Flow](#control-flow)
-- [Functions in Bash](#functions-in-bash)
-- [File Operations](#file-operations)
-- [Text Processing](#text-processing)
-- [Error Handling](#error-handling)
-- [Advanced Topics](#advanced-topics)
-- [Best Practices](#best-practices)
-- [Common Pitfalls](#common-pitfalls)
-  - [Using Help](#using-help)
+    - [Using Help](#using-help)
   - [Using Manual](#using-manual)
   - [Using Documentation](#using-documentation)
   - [Contributing](#contributing)
@@ -126,7 +113,7 @@ hii ni ambavyo itakwambia wewe ni kama normal user au kama root
 
 **Navigating the linux file system**
 
-[⬆️ Return to Top](#top)
+[⬆️ Rudi Juu](#top)
 
 ## Changing Directory
 
@@ -148,7 +135,7 @@ Kwenda kwenye home directory utatumia
 cd ~
 ```
 
-[⬆️ Return to Top](#top)
+[⬆️ Rudi Juu](#top)
 
 ## Directory Contents
 
@@ -232,7 +219,7 @@ la = long-listing -l + -a(display hidden files)
 
   ```
 
-  [⬆️ Return to Top](#top)
+  [⬆️ Rudi Juu](#top)
 
 ## Finding Stuffs
 
@@ -250,7 +237,7 @@ locate wifi
 
 Kwahiyo utakuta unaletewa majibu mengi mno.
 
-[⬆️ Return to Top](#top)
+[⬆️ Rudi Juu](#top)
 
 ## Find
 
@@ -378,7 +365,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
    rmdir directoryName
    ```
 
-   [⬆️ Return to Top](#top)
+   [⬆️ Rudi Juu](#top)
 
 ## Controlling Permissions
 
@@ -441,7 +428,7 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
   chown njox /usr/njoxfile
   ```
 
-  [⬆️ Return to Top](#top)
+  [⬆️ Rudi Juu](#top)
 
   ## Changing Permissions
 
@@ -470,7 +457,7 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
     Hapa "u" inasimama badala ya "user" ambaye ni owner na "+x" in add execute permissio kwa user wetu (owner)
     **NOTE**Katika kuweka permission u inamaana kwamba ni user ambaye ni owner na sio \*_other_ na group ni "g" ila kwa others ni "o".
 
-    [⬆️ Return to Top](#top)
+    [⬆️ Rudi Juu](#top)
 
 ## Kufungua File
 
@@ -497,7 +484,7 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
   Alama ya . (period sign) ina point kwenye current directory kama ambavyo .. inapoint kwenye parent directory.
 
-  [⬆️ Return to Top](#top)
+  [⬆️ Rudi Juu](#top)
 
 ## Kuangalia Historia
 
@@ -509,7 +496,7 @@ history
 
 Ukisha run command hiyo uta list ya command ulizorun ili zitakuwa katika namba kuanzia moja hadi
 
-[⬆️ Return to Top](#top)
+[⬆️ Rudi Juu](#top)
 
 ## Kubadili Msimbo
 
@@ -521,7 +508,7 @@ passwd
 
 Utaweza kubadili msimbo kwenye simu yako uki prompt command ya passwd kwenye terminal itakuuliza current passowrd ambayo iloko kwenye device yako baada ya kujaza itakuaja new password sugestion ambayo unataka kuweka kwenye device yako.
 
-[⬆️ Return to Top](#top)
+[⬆️ Rudi Juu](#top)
 
 ## Kupata Msaada
 
@@ -529,35 +516,37 @@ Utaweza kubadili msimbo kwenye simu yako uki prompt command ya passwd kwenye ter
 
 ## Introduction to Bash Scripting
 
+
 ## Getting Started with Bash
-
-## Variables and Expressions
-
-## Control Flow
-
-## Functions in Bash
-
-## File Operations
-
-## Text Processing
-
-## Error Handling
-
-## Advanced Topics
-
-## Best Practices
-
-## Common Pitfalls
-
-## Writting Shell Scripts
+- Hello World bash script,kabla ya kuandika script yako katika terminal kitu cha kwanza muhimu ujue  sehemu gani bash interpreter ipo located kwa kutumia command ifuatayo.
 
 ```sh
-#!/bin/bash
-# This is our first script.
-echo 'Hello World!'
+which bash
 ```
+Hii command itakupa output ambayo utatumia kuandika program zako zote katika system.
 
-[⬆️ Return to Top](#top)
+- Kitu kinachofuata ni kufungua text editor yako kwa upande wangu natumia vim ila unaweza kutumia text editor yoyote ambayo ni favourable kwako baada ya hapo create file ambalo utaita __sema_dunia.sh__
+
+![](/asset/create%20semadunia.PNG)
+
+```sh
+vim sema_dunia.sh
+```
+Kisha andika kitu kifuatacho katika programu yako
+Kama unapata shida kutumia vim hakikisha unapitia documentation namna ya kutumia Vim editor [](/docs/swahili-guide.md#)
+
+![First Bash script](/asset/echosema_dunia.PNG)
+```sh
+#!/bin/bash
+echo "Sema Dunia"
+```
+Kila script yako katika program yako inabidi iwe katika mpangilio ambao yataanza maneno haya **#!/bin/bash**
+- Ili uweze kurun program yako katika editor nenda katika terminal 
+```sh
+sh sema_dunia.sh
+```
+## Variables and Expressions
+
 
 ## Using Help
 
@@ -601,4 +590,4 @@ Kama unawazo au maoni na kutaka kuchangia kuhusu hii repository! unakaribishwa k
 
 Natumaini hii repository ni muhimu kwako. Nakutakia utendaji mwema na usomaji mwema wa Kali Linux
 
-[⬆️ Return to Top](#top)
+[⬆️ Rudi Juu](#top)
