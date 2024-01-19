@@ -1,4 +1,5 @@
 ## Documentation
+
 # Kali-Linux-Starter-Pack-Swahili
 
 # Getting Started with Kali Linux
@@ -55,7 +56,7 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
 
 ## Introduction
 
-Jinsi ya ku install kali linux https://www.kali.org/docs/installation/hard-disk-install/
+Jinsi ya ku install kali linux <https://www.kali.org/docs/installation/hard-disk-install/>
 
 ## Target Audience
 
@@ -196,7 +197,7 @@ la = long-listing -l + -a(display hidden files)
   ls -Rl /bin
   ```
 
-  ## Sorting contents by by size
+## Sorting contents by by size
 
   Ili uweze ku sort contents kutokana na size tunatumia
 
@@ -250,9 +251,9 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 6. Modifying Files and directories
 
-   ## Creating File
+## Creating File
 
-   - Creating File
+- Creating File
      Kuna aina nyingi za kutengeneza file kwenye Linux.Ila kwa hapa tutangalia aina mbili,njia ya kwanza ni kwa kutumia **cat** keyword ila cat mara nyingi inatumika ku display content za file kwa kutumia
 
    ```
@@ -261,9 +262,9 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
    pia cat inatumika ku create small files ili ku create large files tutatumia Vim au leafpad.
 
-   ## Concatenating File
+## Concatenating File
 
-   - Concatenation with cat.
+- Concatenation with cat.
      keyword cat ikifuatiwa na jina la file itakusaidia kujua content zilizopo ndani ya file lako,ila ili tuweze kutengeneza file kwa kutumia cat,tutatumia cat keyword ikifuatiwa na redirect symbol > ikifuatiwa na jina la file ambalo tunataka kutengeneza
 
    ```
@@ -296,9 +297,9 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
    Kuona content zilizomo
 
-   ## Kutengeneza File
+## Kutengeneza File
 
-   - File creation with touch.Njia nyepesi ya kutengeneza file kwenye terminal ni kutumia touch keyword ikifuatiwa na jina la file ambalo unataka kutengeneza.
+- File creation with touch.Njia nyepesi ya kutengeneza file kwenye terminal ni kutumia touch keyword ikifuatiwa na jina la file ambalo unataka kutengeneza.
 
      ```
      touch CreateFile
@@ -312,16 +313,18 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
      Kma file litakuwa limetengenezwa katika home directory basi ukitumia ls utaweza kuona jina la file lako
 
-   - Adding content into a file:Unaweza kuweka content katika file lako kwa kutumia nano keyword ikifuatiwa na jina la file
+- Adding content into a file:Unaweza kuweka content katika file lako kwa kutumia nano keyword ikifuatiwa na jina la file
+
      ```
      nano njox.txt
      ```
+
      Kwa kutumia nano utaweza kuandika content zako zako then utasave kwa kutumia ctrl + s ,na exit kwa kutumia ctrl + x
      au cat kwa kutumia redirect symbol
 
-   ## Kutengeneza Directory
+## Kutengeneza Directory
 
-   - Kutengeneza directory,utaanza na keyword(mkdir-make a directory) ikifuatiwa na jina la directory yako,mfano
+- Kutengeneza directory,utaanza na keyword(mkdir-make a directory) ikifuatiwa na jina la directory yako,mfano
 
    ```
    mkdir newDirectory
@@ -329,17 +332,17 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
    Kumbuka kwamba directory ni kama folder kwenye windows hiyo ni muhimu kutumia jina ambalo itakuwa ni rahisi kwako kukumbuka au naweza sema tumia simple and descriptive name,mara nyingi directory huwa linakuwa na rangi nyeupe ila file huwa na rangi ya blue,baada ya ku create directory tumia ls kuona kama directory lipo!
 
-   ## Kucopy File
+## Kucopy File
 
-   - Copying file:Ii uweze ku copy file kutoka sehemu moja kwenda nyingine inabidi ujue kwanza una copy file lako kutoka wapi kwenda wapi,keyword inayotumika hapa cp ikimaanisha ni copy followed na jina la file unalocopy na sehemu unayokopia file lako.
+- Copying file:Ii uweze ku copy file kutoka sehemu moja kwenda nyingine inabidi ujue kwanza una copy file lako kutoka wapi kwenda wapi,keyword inayotumika hapa cp ikimaanisha ni copy followed na jina la file unalocopy na sehemu unayokopia file lako.
 
    ```
    cp fileLaZamani fileJipya
    ```
 
-   ## Renaming File
+## Renaming File
 
-   - Renaming file(Kubadili jina la file),kwa bahati nzuri |mbaya ni kwamba katika Kali huwezi ku rename file moja kwa moja ila command ambayo inatumika ni mv(move) kwa kutumia mv tunatoa lile file kutoka sehemu moja kwenda sehemu nyingine.
+- Renaming file(Kubadili jina la file),kwa bahati nzuri |mbaya ni kwamba katika Kali huwezi ku rename file moja kwa moja ila command ambayo inatumika ni mv(move) kwa kutumia mv tunatoa lile file kutoka sehemu moja kwenda sehemu nyingine.
 
    ```
    mv oldfile newfile
@@ -347,9 +350,9 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
    Baada ya file kuwa moved tumia ls kuangalia je hilo file lipo au halipo kumbuka ukitumia mv oldfile linafutika na newfile linakuwa created kwa sababu limekua renamed.
 
-   ## Removing File
+## Removing File
 
-   - Kufuta file:Tumia rm keyword ikifuatiwa na jian la file.
+- Kufuta file:Tumia rm keyword ikifuatiwa na jian la file.
 
    ```
    rm fileName
@@ -357,9 +360,9 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
    Ukifanya long listing(ls -l) kwenye hiyo directory utaona kwamba file limekuwa removed.
 
-   ## Removing Directory
+## Removing Directory
 
-   - Kufuta directory(folder):Tumia rmdir(remove directory) keyword na jina la directory.
+- Kufuta directory(folder):Tumia rmdir(remove directory) keyword na jina la directory.
 
    ```
    rmdir directoryName
@@ -376,9 +379,9 @@ Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w)
 
 - Kuna aina tatu tu za user katika Linux fi;lesystem,kama ifuatavyo.
 
-1.  owner (u): Huyu ndiye mmiliki wa kila kitu yani kama mtu mwenye funguo za kufunga na kufungua kila sehemu.
-2.  group (g): Mmiliki anaweza ku cooperate na group fulani la watu ila yeye ndio atatoa access kwa watu ili waweze kuingia sehemu husika.
-3.  other users (o)
+1. owner (u): Huyu ndiye mmiliki wa kila kitu yani kama mtu mwenye funguo za kufunga na kufungua kila sehemu.
+2. group (g): Mmiliki anaweza ku cooperate na group fulani la watu ila yeye ndio atatoa access kwa watu ili waweze kuingia sehemu husika.
+3. other users (o)
 
 ## Granting Permissions
 
@@ -388,10 +391,10 @@ Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w)
   - execute(x):Permission to execute(run),uwezo wa kurun file ila sio lazima kuview au ku edit
 - By default file likiwa created katika Linux owner wa lile file ndio anakuwa uwezo wa kubadili vitu kwenye lile file.
 
-  ## Checking Permissions
+## Checking Permissions
 
-  - Kabla ya kubadili permission zako katika file lako au directory ni lazima ujue kwanza permissions zipi zipo kwenye file lako na permissons zipi hazipo na kwa user yupi zipo na yupi hazipo pia lazima ujue katika file lipi unataka kuangalia permissions hizo.
-  - Ili uweze kuangalia permissions katika Linux lazima kutumia long listing method katika sehemu ambayo unataka kuangalia hilo file lako.
+- Kabla ya kubadili permission zako katika file lako au directory ni lazima ujue kwanza permissions zipi zipo kwenye file lako na permissons zipi hazipo na kwa user yupi zipo na yupi hazipo pia lazima ujue katika file lipi unataka kuangalia permissions hizo.
+- Ili uweze kuangalia permissions katika Linux lazima kutumia long listing method katika sehemu ambayo unataka kuangalia hilo file lako.
     Mfano: nitatumia home directory kuangalia permissions zilizopo
 
   ```
@@ -408,21 +411,21 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
   1. Herufi ya kwanza kama ni d ina indicate kwamba ni directory(folder) ila kama inaanza na - (dash) ina indicate file.
 
   2. Permissions za file,kuanzia owner(user),group na other users(o).Kumbuka permsiions zipo katika order owner,group,users. **rwxr-xr-x\*
-     Upande wa permissions zipo katika category tatu ambazo ni - owner **rwxr*,x ina maana kwamba owner ana uwezo wa ku read(r), write(w) na ku execute(x) - group \*\*-xr*,group amepewa access ya ku execute na read. - user(others) \*_-x_, other amepewa uwezo wa ku execute basi.
+     Upande wa permissions zipo katika category tatu ambazo ni - owner **rwxr*,x ina maana kwamba owner ana uwezo wa ku read(r), write(w) na ku execute(x) - group \*\*-xr*,group amepewa access ya ku execute na read. - user(others) \**-x*, other amepewa uwezo wa ku execute basi.
 
-  3. Number of links. \*_4_
+  3. Number of links. \**4*
 
-  4. Owner wa hilo faili/Folder:Mmiliki wa hilo file owner kwa hapo owner ni choupo \*_choupo choupo_
+  4. Owner wa hilo faili/Folder:Mmiliki wa hilo file owner kwa hapo owner ni choupo \**choupo choupo*
 
-  5. Size la hilo file:Katika linux file zinakuwa katika bytes \*_4096_
+  5. Size la hilo file:Katika linux file zinakuwa katika bytes \**4096*
 
-  6. Mda gani kali linmekuwa created au modified \*_Aug 10 00:20_
+  6. Mda gani kali linmekuwa created au modified \**Aug 10 00:20*
 
-  7. Jina la file au directroy ambalo hapo ni \*_Angela_
+  7. Jina la file au directroy ambalo hapo ni \**Angela*
 
-  ## Granting Ownership to an Individual User
+## Granting Ownership to an Individual User
 
-  - Kuna mda kuna uhitaji wa kumpa access ya file lako wa individual user fulani,ili kufanikisha hilo tumia chown command ikifuatiwa na user ambaye unataka kumpa access na file ambalo unataka kutoa access.
+- Kuna mda kuna uhitaji wa kumpa access ya file lako wa individual user fulani,ili kufanikisha hilo tumia chown command ikifuatiwa na user ambaye unataka kumpa access na file ambalo unataka kutoa access.
 
   ```
   chown njox /usr/njoxfile
@@ -430,15 +433,15 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
   [⬆️ Rudi Juu](#top)
 
-  ## Changing Permissions
+## Changing Permissions
 
-  - Kubadili permissions kwenye Linux, unaweza kutumia chmod command.chmod command inachukua digits (tarakimu) tatu kama argument,argument ya kwanza inamaanisha settings kwa owner,ya pili kwa group na ya tatu kwa others katika mfuatano.
+- Kubadili permissions kwenye Linux, unaweza kutumia chmod command.chmod command inachukua digits (tarakimu) tatu kama argument,argument ya kwanza inamaanisha settings kwa owner,ya pili kwa group na ya tatu kwa others katika mfuatano.
 
-  - Kila didgit ni sum ya vitu vifuatavyo:
+- Kila didgit ni sum ya vitu vifuatavyo:
 
-    - 4 kwa ajili ya read permission
-    - 2 kwa ajili ya write permission
-    - 1 kwa ajili ya execute permission
+  - 4 kwa ajili ya read permission
+  - 2 kwa ajili ya write permission
+  - 1 kwa ajili ya execute permission
       Mfano,ili tumpe owner uwezo wa ku read and write permissions,group uwezo wa kuread na others no permission,tutafanya hivi:
 
     ```
@@ -455,14 +458,14 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
     ```
 
     Hapa "u" inasimama badala ya "user" ambaye ni owner na "+x" in add execute permissio kwa user wetu (owner)
-    **NOTE**Katika kuweka permission u inamaana kwamba ni user ambaye ni owner na sio \*_other_ na group ni "g" ila kwa others ni "o".
+    **NOTE**Katika kuweka permission u inamaana kwamba ni user ambaye ni owner na sio \**other* na group ni "g" ila kwa others ni "o".
 
     [⬆️ Rudi Juu](#top)
 
 ## Kufungua File
 
 - Kupitia open command utaweza kufungua faili lako ila utatumia sintaksia ifuatayo.
-  `  open <jinaLaFaili>`
+  `open <jinaLaFaili>`
 
   Pia kwenye file hilo unaweza kufungua current directory kwenye terminal yako kwa kutumia komandi hii
 
@@ -516,37 +519,43 @@ Utaweza kubadili msimbo kwenye simu yako uki prompt command ya passwd kwenye ter
 
 ## Introduction to Bash Scripting
 
-
 ## Getting Started with Bash
+
 - Hello World bash script,kabla ya kuandika script yako katika terminal kitu cha kwanza muhimu ujue  sehemu gani bash interpreter ipo located kwa kutumia command ifuatayo.
 
 ```sh
 which bash
 ```
+
 Hii command itakupa output ambayo utatumia kuandika program zako zote katika system.
 
-- Kitu kinachofuata ni kufungua text editor yako kwa upande wangu natumia vim ila unaweza kutumia text editor yoyote ambayo ni favourable kwako baada ya hapo create file ambalo utaita __sema_dunia.sh__
+- Kitu kinachofuata ni kufungua text editor yako kwa upande wangu natumia vim ila unaweza kutumia text editor yoyote ambayo ni favourable kwako baada ya hapo create file ambalo utaita **sema_dunia.sh**
 
 ![](/asset/create%20semadunia.PNG)
 
 ```sh
 vim sema_dunia.sh
 ```
+
 Kisha andika kitu kifuatacho katika programu yako
 Kama unapata shida kutumia vim hakikisha unapitia documentation namna ya kutumia Vim editor [](/docs/swahili-guide.md#)
 
 ![First Bash script](/asset/echosema_dunia.PNG)
+
 ```sh
 #!/bin/bash
 echo "Sema Dunia"
 ```
+
 Kila script yako katika program yako inabidi iwe katika mpangilio ambao yataanza maneno haya **#!/bin/bash**
-- Ili uweze kurun program yako katika editor nenda katika terminal 
+
+- Ili uweze kurun program yako katika editor nenda katika terminal
+
 ```sh
 sh sema_dunia.sh
 ```
-## Variables and Expressions
 
+## Variables and Expressions
 
 ## Using Help
 
