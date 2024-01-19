@@ -6,7 +6,8 @@
   - [Variables and Expressions](#variables-and-expressions)
   - [Input and Output Redirection](#input-and-output-redirection)
   - [Comments](#comments)
-  - [Control Flow](#control-flow)
+  - [Decision Making](#decision-making)
+  - [Loops](#loops)
   - [Functions in Bash](#functions-in-bash)
   - [File Operations](#file-operations)
   - [Text Processing](#text-processing)
@@ -14,6 +15,7 @@
   - [Advanced Topics](#advanced-topics)
   - [Best Practices](#best-practices)
   - [Common Pitfalls](#common-pitfalls)
+  - [Mistakes](#mistakes)
 
 <a name="top"></a>
 
@@ -36,7 +38,7 @@
 
 - Ili wueze kuandika script zako katika bash unahitaji kuwa na text editor abayo itakuwesha kuandika scripts zako.
 - Katika docs hii tutatumia `vim` kama ndio text editor yetu,ila kwa jinsi ambayo muda unaenda na unaandika complex script utatuia text editor yoyote kama VS Code Sublime.
-  -Kuna baadhi ya command ni muhimu kufahamu kabla hujaanza kuandika scripts zako, mfano wa commands hizo ni `echo, cat `, pia hakikisha umepitia basic commands [hapa](/docs/swahili-guide.md)
+  -Kuna baadhi ya command ni muhimu kufahamu kabla hujaanza kuandika scripts zako, mfano wa commands hizo ni `echo, cat`, pia hakikisha umepitia basic commands [hapa](/docs/swahili-guide.md)
 - Script yetu ya kwanza kuandika itakuwa ya `Sema Dunia` yaani `Hello World`
 - Create file ambalo litakuwa na extension ya `.sh` mfano: `semadunia.sh`
 
@@ -200,6 +202,7 @@ cat file.txt
 - Unaweza fuatilia why are comments important in programming [hapa](https://medium.com/@godblessnyagawa/understanding-the-significance-of-comments-in-programming-introduction-in-the-intricate-world-of-938eb4632da1)
 
 1. `single line comments`. Single line comments zinakuwa ndani ya line moja katika script zako.Single line comments zinaanza na `#` symbol katika program yako.Mfano
+
 ```sh
 # hii ni comment
 echo "Hello"
@@ -211,6 +214,7 @@ COMMENT
 
 2. `multiline comments`.
 ila multiline comments zinakuwa katika zaidi ya line moja katika script zako.
+
 ```sh
 # hii ni comment
 echo "Hello"
@@ -219,7 +223,132 @@ echo "Hello"
 
 [⬆️ Rudi Juu](#top)
 
-## Control Flow
+## Decision Making
+
+- Decison making zinatumika katika bash scripting kuangalia kama statements yetu ni ukweliama sio kweli ndipo inafanya maamzui pia ili uweze kufanya descion making statements uhaitaji kuwa na operators ambazo zinakusaidia kuangalia kama kauli ni kweli au sio kweli `conditional operators` zipo conditional operators nyingi zinazotumika katika bash scripting ila zimetofautiana namna zinayoandikwa na zile za kwenye programming language nyningine, mfano wa hizo operators
+
+| Operator           | Description                          | Example                  |
+| ------------------ | ------------------------------------ | ------------------------ |
+| `=`                | Equal(sawa)                                | `[[ "$a" = "$b" ]]`      |
+| `!=`               | Not equal(sio sawa)                            | `[[ "$a" != "$b" ]]`     |
+| `-eq`              | Equal (numeric comparison)(comparion ya namba)           | `[[ "$a" -eq "$b" ]]`    |
+| `-ne`              | Not equal (numeric comparison)(sio sawa comparion ya namba)       | `[[ "$a" -ne "$b" ]]`    |
+| `-lt`              | Less than (numeric comparison)(zaidi ya comparion ya namba)        | `[[ "$a" -lt "$b" ]]`    |
+| `-le`              | Less than or equal to (numeric comparison)(ndogo ya au sawa na comparion ya namba) | `[[ "$a" -le "$b" ]]`   |
+| `-gt`              | Greater than (numeric comparison)(zaidi ya namba)     | `[[ "$a" -gt "$b" ]]`    |
+| `-ge`              | Greater than or equal to (numeric comparison)(comparion ya namba kubwa au sawa na namba) | `[[ "$a" -ge "$b" ]]`   |
+| `&&`               | AND logical operator                 | `[[ condition1 && condition2 ]]` |
+| `||`               | OR logical operator                  | `[[ condition1 || condition2 ]]` |
+| `-z`               | Checks if a string is empty(inaangalia kama string iko tupu)          | `[[ -z "$str" ]]`        |
+| `-n`               | Checks if a string is not empty(inaangalia kam string haiko tupu)      | `[[ -n "$str" ]]`        |
+
+- Kuna condition mbili kwenye bash scripting `if` statements na `case` statement.
+- If statement katika bah scripting inatumika kuangalia kama statement ni kweli au sio kweli
+
+```sh
+if [ condition ]; then
+    # code to execute if the condition is true
+else
+    # code to execute if the condition is false
+fi
+
+```
+
+Hiyo ndio sintaksia `if` statement katika bash scripting
+example:Tengeneza program kuangalia kama miaka ya mtu ni zaidi ya 18 au ni ni chini ya 18
+
+```sh
+#!/bin/bash
+
+#!/bin/bash
+
+echo "Enter age"
+read age
+if [ $age -gt 18 ]; then
+    echo "Unaruhisiwa kupiga kura"
+else
+    echo "Hauruhisiwi kupiga kura"
+fi
+```
+
+```sh
+#!/bin/bash
+
+# Check if a file exists
+if [ -e "file.txt" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+
+```
+
+- Katika bash scripting logical operators pia zinatumika kuangalia kama kauli fulani ni kweli ama sio kweli ila itaangalia upande wote, kuna logical operators tatau katika bash scripting ambazo ni `logical and &&` `logical or ||` na `logical not !`, kazi ya `logical and` Mfano
+
+```sh
+#!/bin/bash
+echo "Enter username"
+read un
+echo "Enter password"
+read pw
+if [[ "$un" == "admin" && "$pw" == "superuser" ]]; then
+echo "Login Successful."
+fi
+```
+
+- Katika `logical or` inaangalia kam angalau satement moja katika code yako ni kweli mfano wa code hapo chini
+
+```sh
+#!/bin/bash
+echo "Enter username"
+read un
+echo "Enter password"
+read pw
+if [[ "$un" == "admin" || "$pw" == "superuser" ]]; then
+echo "Login Successful."
+fi
+```
+
+inaangalia kama statement katika script yako pande zote kama ni kweli then script yako inakuwa executed ila kwenye upnade wa logical or inaangalia kama statetment upande mmoja ni kweli then satement inakuwa executed ila `logical not` inabadili statement ambayo ni kweli kuwa sikweli na kinyume chake(vice versa) hivyo mfano kama statement ni kweli itakuwa sio kweli na kama statement ni sio kweli itakuwa kweli.
+
+- Hivyo kupitia conditional statement katika bash scripting tunaweza kutengeneza project ambayo ,utatengeneza folder ambapo kwenye script yetu itaangalia kama folder(directory) lipo au halipo pia hata kwa upande wa file tunaweza tukafanya hivyo.
+
+## Matukio(Matumiz) ya Conditional Statement Katika Bash
+
+### 1. Operesheni za Faili na Dairektori
+
+- Kuangalia kama faili ipo kabla ya kufanya operesheni fulani.
+- Kuthibitisha kama dairektori haiko tupu kabla ya kufuta.
+
+### 2. Uthibitisho wa Ingizo
+
+- Kuhakikisha kwamba matokeo ya mtumiaji yanakidhi vigezo fulani.
+- Uthibitisho wa vigezo vya amri ya mstari wa amri.
+
+### 3. Uchunguzi wa Hali ya Mfumo
+
+- Kuthibitisha mali za mfumo kabla ya kutekeleza amri fulani.
+- Kuangalia kama dependensi muhimu zimefungwa.
+
+### 4. Usimamizi wa Usanidi
+
+- Kufanya maamuzi kulingana na yaliyomo kwenye faili za usanidi.
+
+### 5. Kazi za Kiotomatiki
+
+- Kutumia matamshi ya masharti kutekeleza kazi kulingana na wakati fulani wa siku au hali ya mazingira.
+
+### 6. Operesheni za Mtandao
+
+- Kuthibitisha upatikanaji wa mtandao kabla ya kutekeleza amri za mtandao.
+
+### 7. Uchanganuzi wa Faili ya Kumbukumbu
+
+- Kujenga script inayochambua faili za kumbukumbu, ikitoa habari inayofaa kulingana na vigezo vilivyowekwa.
+
+## Loops
+
+- Control flow zinatumika katika
 
 [⬆️ Rudi Juu](#top)
 
@@ -250,3 +379,21 @@ echo "Hello"
 ## Common Pitfalls
 
 [⬆️ Rudi Juu](#top)
+
+## Mistakes
+
+- Moja kati ka kosa kubwa watu wanfanya hata mimi nlifanya  ni sehemu ya conditional statement kutokuacha nafasi ndani ya brackeks(square) moja na nyingine
+
+```sh
+echo "Enter age"
+read age
+if [ $age -gt 18]; then
+    echo "Unaruhisiwa kupiga kura"
+else
+    echo "Hauruhisiwi kupiga kura"
+fi
+
+# output: decision.sh: line 10: [: missing `]' Hauruhisiwi kupiga kura
+```
+
+kwa hiyo badala ya kufanya hizo hivyo ni muhimu kuacha nafasi katika mabano nadni ya condtion yako kwa pande zote kushoto na kulia.
