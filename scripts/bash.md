@@ -9,6 +9,7 @@
   - [Decision Making](#decision-making)
   - [Loops](#loops)
   - [Functions in Bash](#functions-in-bash)
+  - [Files and Directories](#files-and-directories)
   - [File Operations](#file-operations)
   - [Text Processing](#text-processing)
   - [Error Handling](#error-handling)
@@ -103,18 +104,19 @@ echo $SHELL
 
 ## Variables and Expressions
 
-- Variable ni kama box ambapo box linakuwa na kitu fulani ndani yako au tunaweza tukasema variable is the container which stores value inside it.
+- Variable ni kama box ambapo box linakuwa na kitu fulani ndani yake au tunaweza tukasema variable is the container which stores value inside it.
+
 - Ili kuweza kutengeneza variable hakikisha unaanza na shebang then andika script zako.
 
 ```sh
 JINA="Linux Trovalds"
 echo $JINA
+# ouput: Linux Trovalds
 ```
 
-ouput: Linux Trovalds
-![](/asset/box%20variable.PNG)
+![Output](/asset/box%20variable.PNG)
 
-- Ili uweze kupata input kutoka kwa user tumia `read` command.Kwa kutumia mfano halishia tunaweza,kupitia bash scripting nataka njifunze automation basi unaweza read input ya user then ukaautomate kazi zako.
+- Ili uweze kupata input kutoka kwa user tumia `read` command. Kwa kutumia mfano halisia tunaweza,kupitia bash scripting nataka njifunze automation basi unaweza read input ya user then ukaautomate kazi zako.
 
 ```sh
 !#/bin/bash
@@ -127,16 +129,6 @@ read JINA_LA_MWISHO
 echo Karibu $JINA_LA_KWANZA $JINA_LA_MWISHO
 ```
 
-- Comments, comments ni line za kwenye code yako ambazo zinakuwa ignored na interpreter, comments katika bash scripting zipo za ain mbili ambazo ni singleline comments na multiline comments.Singleline comments zinaanza na # symbo katiak script.
-  Mfano
-
-```sh
-#!/bin/bash
-
-# hii ni comment
-echo "Working with Comments
-```
-
 [⬆️ Rudi Juu](#top)
 
 ## Input and Output Redirection
@@ -144,7 +136,7 @@ echo "Working with Comments
 - Output redirection, ni kitendo cha kuchukua outputbya file ambalo liko katika bash scripting ila hilo file linakuwa directed kwenda kwenye file lingine katika program yako.
 - Output redirection inatumika kutuma output ya kwenye program kwenda sehemu nyingine ya kwenye programu yako na pia kuna category mbili tu za output redirection
 
-1. **Writting to a a file**
+1. **Writting to a file**
 
 - Kuna ile situation ambayo unataka output yako iende kwenye programu fulani katika labda katika file la file.txt, yaani umenda program ya kufanya registration ya wat fulnai ila unataka kwamba wakishaibgiza majina yao then majina yao yaende kwenye file la file.tx, ila kumbuka kwa ktumia writing to a file inafuta baadhi ya vitu kwenye program yako kwamba kama user wa kwanza atajaza details zake then user wa puili akija kujaza naye details zake katika program yako then majina yake yatakua overwitten na symbol inayiotumika kwa ajili ya overwtiing katika program yako ni kw akutumia `>` symbol(greter operator symbol)
 - Mfano:
@@ -194,7 +186,8 @@ cat file.txt
 ```
 
 - Input na outpt redirection inatumika katika program ili tuweze kufanya configuration za files katika program yetu
-  [⬆️ Rudi Juu](#top)
+
+[⬆️ Rudi Juu](#top)
 
 ## Comments
 
@@ -213,12 +206,14 @@ COMMENT
 ```
 
 2. `multiline comments`.
-ila multiline comments zinakuwa katika zaidi ya line moja katika script zako.
+ila multiline comments zinakuwa katika zaidi ya line moja katika script zako. Ili kuweza kutumia multiline comments utaanza na colon : ikifuatiwa na single quote na comment yako na kisha comment yako inafungwa na single qoute kwenye program yako.
 
 ```sh
 # hii ni comment
 echo "Hello"
 <<- Welcome to bash scripting this is the comment
+: ' This is multiline comment the startup directory exists so read any initialisation file.
+echo "initialising file processing'
 ```
 
 [⬆️ Rudi Juu](#top)
@@ -354,7 +349,88 @@ inaangalia kama statement katika script yako pande zote kama ni kweli then scrip
 
 ## Functions in Bash
 
+- Function, function katika bash ni sawa na zile kwenye upande wa lugha nyingine ila syntax inaweza ikawa na utofauti kidogo kwamba function inaanza na jina keyword function ikifuatiwa na jina la function yako na mabano kisha mabano singasinga na ndani ya mabano sinagsinga ndio function body,kwamba vitu vyote ambavyo vinakuwa declared kwenye function yako vinafanywa ndani ya hayo mabano.
+
+```sh
+function greetUser(){
+    echo "Habari!"
+}
+```
+
+Kutoka kwenye mfano hapo juu,tumetengeneza function ambayo inaitwa `greetUser()` na ndani ya body ya function yetu kuna neno "Habari" hivyo ili function yetu iweze kutekelezwa(executed) inabidi function yetu iitwe(iwe called), na baada ya kuwa called body iliyopo ndani ya function yetu ndio itatekelezwa.
+
+```sh
+function greetUser(){
+    echo "Habari!"
+}
+
+greetUser
+
+# Output: Habari!
+```
+
+Hivyo ili uweze kutumia function yako katika program yako lazima uite function katika program yako.
+
+- Kama ilivyo kwenye lugha zingine function lazima iwe inachukua arguments sasa kwenye bash ni tofauti kidogo kwamba ndani ya function, function body ndiyo kunakuwa na argument na wakati wa kuita funtion yako unapitisha arguments zako sawa na idadi ambayo ipo kwenye body.
+
+```sh
+#!/usr/bin/bash
+
+function greetUser(){
+    echo $1 $2 $3 $4
+}
+
+greetUser Habari Njox Karibu
+
+# Output: Habari Njox Karibu
+```
+
+Endapo idadi ya argument itakuwa chache ukifananisha na idadi ya statement ambazo unataka zitekelezwa, program itatekeleza kutokana na idadi ya arguments,Angalia mfano:
+
+```sh
+#!/usr/bin/bash
+
+function greetUser(){
+    echo $1 $2 $3 $4
+}
+
+greetUser Habari Njox Karibu GitLit Ujifunze
+
+# Output: Habari Njox Karibu GitLit 
+```
+
+- Kwenye function kuna concept ya local variable na global variable pia! Local variable ni ile variable ambao inawigo mdogo yaani kwamba haiwezi kuwa accessed nje ya function yako
+
+```sh
+function greetUser(){
+    jina="Njox"
+}
+
+echo $jina
+```
+
+- Kutoka kwenye mfano hapo juu function `greetUser()` ndani kuna variable inaitwa jina, ukijaribu kupata output ya variable yako nje ya `greetUser()` function haitawezekana na pia output haitakuweka kwa sababu variable yetu iko katika local scope na hivyo haiwezi kuwa accessed nje ya scope.
+
+- Global varible, ni ile variable ambayo unaweza kupata access yake ukiwa sehemu yoyote il kwenye programu yako kwa mfano:
+
+```sh
+jina="Njox"
+
+function greetUser(){
+    echo Karibu $jina
+}
+
+greetUser
+# Output: Karibu Njox
+```
+
+- Variable jina katika program yako ni global kwamba kupata access ya variable yako ni popote pale nje au ndani ya function yoyote,kama kwenye mfano hapo tumeweza kupata access ya variable jina kwa sababu ni global variable.
+
 [⬆️ Rudi Juu](#top)
+
+## Files and Directories
+
+- Katika section hii tutajifunza jinsi ya kutengeneza files and directories.
 
 ## File Operations
 
