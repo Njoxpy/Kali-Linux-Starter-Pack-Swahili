@@ -1,5 +1,7 @@
 *.db
 Thumbs.db
 *.db
- ../asset/Thumbs.db
- asset/Thumbs.db
+../asset/Thumbs.db
+asset/Thumbs.db
+asset/Thumbs.db
+Thumbs.db
