@@ -1,8 +1,8 @@
-## Documentation
+# Documentation
 
-# Kali-Linux-Starter-Pack-Swahili
+## Kali-Linux-Starter-Pack-Swahili
 
-# Getting Started with Kali Linux
+## Getting Started with Kali Linux
 
 Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kujua baadhi ya commands muhimu ambazo hauna budi kufahamu kama mtumiaji wa kali Linux kwa Beginners kabisa,Kali linux inatumika katika shughuli mbalimbali kama katika kwenye penetration testing na ethical hacking,ila hii repository ni kwa mtu yoyote anayeanza kutumia Kali Linux.
 
@@ -44,7 +44,7 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
   - [Checking Permissions](#checking-permissions)
   - [Granting Ownership to an Individual User](#granting-ownership-to-an-individual-user)
   - [Changing Permissions](#changing-permissions)
-  - [Compression adn Archiving](#)
+  - [Compression and Archiving](#compression-and-archiving)
   - [Kufungua File](#kufungua-file)
   - [Kuangalia Historia](#kuangalia-historia)
   - [Kubadili Msimbo](#kubadili-msimbo)
@@ -80,13 +80,13 @@ Hi repository itahusisha vitu vifuatavyo(content):
 
 ## Basic Commands
 
-**Basic commands ambazo zinatakiwa kutumika katika Kali Linux**
+Basic commands ambazo zinatakiwa kutumika katika Kali Linux
 
 ## pwd
 
 1. Finding Yourself with pwd:Kama upo kwenye directory mfano desktop ili kufahamu tunatumia keyword ya pwd kirefu cha pwd ni print working directory,inamaana uki prompt
 
-```
+```sh
 pwd
 ```
 
@@ -94,7 +94,7 @@ output utakayo pata ni kutokana na directory uliyopo kama upo home directory ita
 
 `/home/username`
 
-```
+```sh
 pwd
 ```
 
@@ -102,37 +102,37 @@ Hapa utaweza kujua kama ni root(super-user) au normal user
 
 ## Checking Login
 
-2. Whoami/Checking Your Login with whoami: Mimi ni nani,Katika linux kuna user wa aina tatu supersuser,group na other user,basi ilikuweza kujua umeingia kama inabidi kutumia command ya.Endapo utatumia root terminal emulator itakwambia ni root ila kama terminal emulator utaleta jina lako au username yako.
+2.Whoami/Checking Your Login with whoami: Mimi ni nani,Katika linux kuna user wa aina tatu supersuser,group na other user,basi ilikuweza kujua umeingia kama inabidi kutumia command ya.Endapo utatumia root terminal emulator itakwambia ni root ila kama terminal emulator utaleta jina lako au username yako.
 
-```
+```sh
 whoami
 ```
 
 hii ni ambavyo itakwambia wewe ni kama normal user au kama root
 
-**NOTE:Kama umeingia kwenye terminal kama normal user italeta normal ila kama umetumia Root terminal emulator itaonesha kama root**
+NOTE: Kama umeingia kwenye terminal kama normal user italeta normal ila kama umetumia Root terminal emulator itaonesha kama root
 
-**Navigating the linux file system**
+## Navigating the linux file system
 
 [⬆️ Rudi Juu](#top)
 
 ## Changing Directory
 
-3. Changing directory/Kubadili directory.Directory katika linux ni sawa na folder katika windows,kama mtumiaji wa linux inabidi kujua jinsi ya kutoka kwenye directory moja kwenda directory nyingine.Kutoka directory hiyo kwenda nyingine utatumia cd keyword followed na sehemu ambayo unataka kwenda kama ni desktop itakua.
+3.Changing directory/Kubadili directory.Directory katika linux ni sawa na folder katika windows,kama mtumiaji wa linux inabidi kujua jinsi ya kutoka kwenye directory moja kwenda directory nyingine.Kutoka directory hiyo kwenda nyingine utatumia cd keyword followed na sehemu ambayo unataka kwenda kama ni desktop itakua.
 
-```
+```sh
 cd Desktop
 ```
 
 Baada ya kutoka katika hiyo directory kurudi nyuma kwenye directory ulitoka ni
 
-```
+```sh
 cd ..
 ```
 
 Kwenda kwenye home directory utatumia
 
-```
+```sh
 cd ~
 ```
 
@@ -140,9 +140,9 @@ cd ~
 
 ## Directory Contents
 
-4. Kujua vitu vilivyomo katika directory yako au folder(natumia hii term ili iwe rahisi kukumbuka kwenye uki relate na window),command inayotumika ni
+4.Kujua vitu vilivyomo katika directory yako au folder(natumia hii term ili iwe rahisi kukumbuka kwenye uki relate na window),command inayotumika ni
 
-```
+```sh
 ls
 ```
 
@@ -150,13 +150,13 @@ Katika ku list kuna namna mbali zinazotumika!
 
 i. Listing hidden files
 
-```
+```sh
 ls -la
 ```
 
 ii. Long listing:
 
-```
+```sh
 ls -l
 ```
 
@@ -172,14 +172,14 @@ ls -la (display all files including hidden files in long listing format)
 jaribu hii katijka home directroy,linux huwa ina ignore file zinazo anza na . au .. hivyo uki prompt
 ls -la,kitachotokea ni kwamba files zinazoanza na .. na . hazitakuwa ignored
 
-```
+```sh
 ls -la
 ```
 
 la = long-listing -l + -a(display hidden files)
 -l diplays files katika long listing na details ambazo zinakuwa displayed zinaitwa metadata,mfano wa metadata ni file type,permission,links,size,file name
 
-**Why are files hidden in linux**
+## Why are files hidden in linux
 
 - clean and organized directory
 - Privacy and security
@@ -187,13 +187,13 @@ la = long-listing -l + -a(display hidden files)
   unaweza kufuatilia vizuri hapa >>
 - Kama unataka kudisplay content zote zlizopo katika kila directory na sub directoris tumia
 
-  ```
+  ```sh
   ls -R
   ```
 
   NOTE:Kuwa makini sana unavyo tumia ls -R kwenye root itachukua mda mrefu sana na kama itakuwa connected na usb au dvd inabidi itoe list ya vitu vyote vilivyomo humo,pia jitahidi kuwa specific kama unataka ku display contents zote na subdirectoris zilizopo katika /bin tumia
 
-  ```
+  ```sh
   ls -Rl /bin
   ```
 
@@ -201,30 +201,26 @@ la = long-listing -l + -a(display hidden files)
 
   Ili uweze ku sort contents kutokana na size tunatumia
 
-  ```
+  ```sh
   -S
   ```
 
   Kumbuka Linux ni case sensitive kwa hiyo ukitumia -s utapata kitu kingine,hivyo ili uweze ku sort files zako kutokana na size tumia -S,item zitakuwa sorted from largest to lowest size
 
-  ```
+  ```sh
   ls -S
   ``
   mara nyingi -S huwa inaenda vizuri ikiwa combined na -l mfano
 
-  ```
-
+  ```sh
   ls -lS
-
-  ```
-
   ```
 
   [⬆️ Rudi Juu](#top)
 
 ## Finding Stuffs
 
-5. Kutafuta content fulani au directory katika system yako
+5.Kutafuta content fulani au directory katika system yako
 
 ## Locate
 
@@ -232,7 +228,7 @@ la = long-listing -l + -a(display hidden files)
   unaanza na keyword ya locate folowed by the file you want to search kwa hiyo,kitakacho fanyika ni system kuenda kunagalia kama hiloneno au foklder lipo kwenye entire file sytem
 - Njia nyepesi ya kutafuta kitu chochote kwa linux ni kutumia locate command ial shida ya locate command ni kwamba itakupa karibia kila kitu kilichopo katika system kwenye stystem kwahiyo unakuta unakuwa confused,kutumia locate anza na locate keyword ikifuatiwa na neno ambalo unataka kutafuta
 
-```
+```sh
 locate wifi
 ```
 
@@ -249,14 +245,14 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 ## Modifying Files and directories
 
-6. Modifying Files and directories
+6.Modifying Files and directories
 
 ## Creating File
 
 - Creating File
      Kuna aina nyingi za kutengeneza file kwenye Linux.Ila kwa hapa tutangalia aina mbili,njia ya kwanza ni kwa kutumia **cat** keyword ila cat mara nyingi inatumika ku display content za file kwa kutumia
 
-   ```
+   ```sh
    cat njox.txt
    ```
 
@@ -267,31 +263,31 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 - Concatenation with cat.
      keyword cat ikifuatiwa na jina la file itakusaidia kujua content zilizopo ndani ya file lako,ila ili tuweze kutengeneza file kwa kutumia cat,tutatumia cat keyword ikifuatiwa na redirect symbol > ikifuatiwa na jina la file ambalo tunataka kutengeneza
 
-   ```
+   ```sh
    cat > njox.txt
    ```
 
    baada ya hapo uta click enter the linux itakuwezesha wewe kuweza kuandika maneno unayotaka katika terminal yako,baada ya kuandika utaweza ku quit kwa kutumia ctrl+d,na ili uweze kuona content zilizo kwenye file lako tumia cat keyword ikifuatiwa na jina la file
 
-   ```
+   ```sh
    cat njox.txt
    ```
 
    Endapo utatumia cat keyword tena na redirect symbol mfano
 
-   ```
+   ```sh
    cat > njox.txt
    ```
 
    content zako zote ulizoandika kwenye file la kwanza zitafutika,sasa je utafanyaje kama hutaki content zilizomo zifutike,hapa tutatumia cat keyword ikifuatiwa na double redirect symbol >> kwenda kwenye jina la file lako
 
-   ```
+   ```sh
    cat >> njox.txt
    ```
 
    Tumia
 
-   ```
+   ```sh
    cat njox.txt
    ```
 
@@ -301,13 +297,13 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - File creation with touch.Njia nyepesi ya kutengeneza file kwenye terminal ni kutumia touch keyword ikifuatiwa na jina la file ambalo unataka kutengeneza.
 
-     ```
+     ```sh
      touch CreateFile
      ```
 
      Kumbuka katika kutengeneza file unaweza weka na extension ya file hilo pia mfano:
 
-     ```
+     ```sh
      touch index.html
      ```
 
@@ -315,7 +311,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - Adding content into a file:Unaweza kuweka content katika file lako kwa kutumia nano keyword ikifuatiwa na jina la file
 
-     ```
+     ```sh
      nano njox.txt
      ```
 
@@ -326,7 +322,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - Kutengeneza directory,utaanza na keyword(mkdir-make a directory) ikifuatiwa na jina la directory yako,mfano
 
-   ```
+   ```sh
    mkdir newDirectory
    ```
 
@@ -336,7 +332,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - Copying file:Ii uweze ku copy file kutoka sehemu moja kwenda nyingine inabidi ujue kwanza una copy file lako kutoka wapi kwenda wapi,keyword inayotumika hapa cp ikimaanisha ni copy followed na jina la file unalocopy na sehemu unayokopia file lako.
 
-   ```
+   ```sh
    cp fileLaZamani fileJipya
    ```
 
@@ -344,7 +340,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - Renaming file(Kubadili jina la file),kwa bahati nzuri |mbaya ni kwamba katika Kali huwezi ku rename file moja kwa moja ila command ambayo inatumika ni mv(move) kwa kutumia mv tunatoa lile file kutoka sehemu moja kwenda sehemu nyingine.
 
-   ```
+   ```sh
    mv oldfile newfile
    ```
 
@@ -354,7 +350,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - Kufuta file:Tumia rm keyword ikifuatiwa na jian la file.
 
-   ```
+   ```sh
    rm fileName
    ```
 
@@ -364,7 +360,7 @@ Kwahiyo utakuta unaletewa majibu mengi mno.
 
 - Kufuta directory(folder):Tumia rmdir(remove directory) keyword na jina la directory.
 
-   ```
+   ```sh
    rmdir directoryName
    ```
 
@@ -397,7 +393,7 @@ Je unafanyaje? Katika Linux kuna permissions tatu ambazo ni: read (r), write (w)
 - Ili uweze kuangalia permissions katika Linux lazima kutumia long listing method katika sehemu ambayo unataka kuangalia hilo file lako.
     Mfano: nitatumia home directory kuangalia permissions zilizopo
 
-  ```
+  ```sh
   ls –l
   ```
 
@@ -427,11 +423,13 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
 - Kuna mda kuna uhitaji wa kumpa access ya file lako wa individual user fulani,ili kufanikisha hilo tumia chown command ikifuatiwa na user ambaye unataka kumpa access na file ambalo unataka kutoa access.
 
-  ```
+  ```sh
   chown njox /usr/njoxfile
   ```
 
   [⬆️ Rudi Juu](#top)
+
+## Compression and Archiving
 
 ## Changing Permissions
 
@@ -444,7 +442,7 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
   - 1 kwa ajili ya execute permission
       Mfano,ili tumpe owner uwezo wa ku read and write permissions,group uwezo wa kuread na others no permission,tutafanya hivi:
 
-    ```
+    ```sh
     chmod 640 filename
     ```
 
@@ -453,7 +451,7 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
     Ili uweze ku add au remove permissions tumia + au - symbols kabla ya digits.
     Mfano,kuweka permssion kwa owner ili aweze execute, unaweza kutumia:
 
-    ```
+    ```sh
     chmod u+x filename
     ```
 
@@ -469,19 +467,19 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
   Pia kwenye file hilo unaweza kufungua current directory kwenye terminal yako kwa kutumia komandi hii
 
-  ```
+  ```sh
   open .
   ```
 
   Kupitia kommandi hii utaweza kufungua current directory kwenye kifaa chako kwa mfano nipo katika directory la desktop ambalo nilifungua kwa kutumia
 
-  ```
+  ```sh
   cd Desktop
   ```
 
   Ili kuweza kufungua current directory kwenye folder hilo utatumia komandi
 
-  ```
+  ```sh
   open .
   ```
 
@@ -493,7 +491,7 @@ drwxr-xr-x  4 choupo choupo    4096 Aug 10 00:20  Angela`
 
 Kila mda unapo run command yoyote katika terminal yako inahifadhiwa,ili kuweza kuangalia historia ya komandi zako utatumia command ifuatayo
 
-```
+```sh
 history
 ```
 
@@ -505,7 +503,7 @@ Ukisha run command hiyo uta list ya command ulizorun ili zitakuwa katika namba k
 
 Password kwa jina wanaita msimbo,hivyo kupitia komandi ya
 
-```
+```sh
 passwd
 ```
 
@@ -515,47 +513,7 @@ Utaweza kubadili msimbo kwenye simu yako uki prompt command ya passwd kwenye ter
 
 ## Kupata Msaada
 
-**Kufahamu sehemu gani umekwama kama mtuamiaji wa Kali Linux ni muhimu sana**
-
-## Introduction to Bash Scripting
-
-## Getting Started with Bash
-
-- Hello World bash script,kabla ya kuandika script yako katika terminal kitu cha kwanza muhimu ujue  sehemu gani bash interpreter ipo located kwa kutumia command ifuatayo.
-
-```sh
-which bash
-```
-
-Hii command itakupa output ambayo utatumia kuandika program zako zote katika system.
-
-- Kitu kinachofuata ni kufungua text editor yako kwa upande wangu natumia vim ila unaweza kutumia text editor yoyote ambayo ni favourable kwako baada ya hapo create file ambalo utaita **sema_dunia.sh**
-
-![](/asset/create%20semadunia.PNG)
-
-```sh
-vim sema_dunia.sh
-```
-
-Kisha andika kitu kifuatacho katika programu yako
-Kama unapata shida kutumia vim hakikisha unapitia documentation namna ya kutumia Vim editor [](/docs/swahili-guide.md#)
-
-![First Bash script](/asset/echosema_dunia.PNG)
-
-```sh
-#!/bin/bash
-echo "Sema Dunia"
-```
-
-Kila script yako katika program yako inabidi iwe katika mpangilio ambao yataanza maneno haya **#!/bin/bash**
-
-- Ili uweze kurun program yako katika editor nenda katika terminal
-
-```sh
-sh sema_dunia.sh
-```
-
-## Variables and Expressions
+- Kufahamu sehemu gani umekwama kama mtuamiaji wa Kali Linux ni muhimu sana
 
 ## Using Help
 
@@ -563,17 +521,17 @@ sh sema_dunia.sh
 
    - Moja kati ya command ambayo ni muhimu kutumia kama umekwama ni --help au -h,ili kutumia hii utaanza na keyword ambayo unataka kujua ikifutiwa na --help au -h
 
-   ```
+   ```sh
    cd --help
    ```
 
 ## Using Manual
 
-2. Kutumia Manual pages(man)
+2.Kutumia Manual pages(man)
 
 - Ili kutumia manual pages utaanza na keyword man ikifuatiwa na keyword ambayo unatafuta
 
-```
+```sh
 man ls
 ```
 
@@ -581,11 +539,11 @@ Manual imegawanyika katika section mbalimbali,name,synopsis,description,authors,
 
 ## Using Documentation
 
-3. Kutumia --info
+3.Kutumia --info
 
 - Kupitia info keyword ikifuatiwa na neno ambalo unataka litafutwe utaweza kupata documentation kuhusu neno ambalo unatafuta katika program yako kama utakuwa umekwama.Hapa ndio utapata official documentation kuhusu command yako.
 
-```
+```sh
 info ls
 ```
 
