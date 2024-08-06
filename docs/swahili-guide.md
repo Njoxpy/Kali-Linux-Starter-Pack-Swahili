@@ -56,7 +56,9 @@ Karibu katika hii repository ya Kali starter pack! Hi repository itakusaidia kuj
 
 ## Introduction
 
-Jinsi ya ku install kali linux <https://www.kali.org/docs/installation/hard-disk-install/>
+- Kuna jinsi 3 za kweza kufanya installation ya kali Linux katika Machine yako, ya kwanza ni `kuweka linux kama primary operating system`, `kutumia dual booting` na mwisho ni kwa kutumia `virtual box.
+
+- Jinsi ya kusakinisha kali linux <https://www.kali.org/docs/installation/hard-disk-install/>
 
 ## Target Audience
 
@@ -69,7 +71,7 @@ Hii guide ni kwa ajili ya:
 "Linux starter pack" repository imebase kwenye maada zifuatazo:
 
 - Basic command Line Usage: Jinsi ya kutumia Linux command line na command zinazo tumika kwa ajili kalinLinux.
-- Mazoezi ya vitendo: Katika folder la exercise.txt utapata list ya maswali ambayo utafanya.
+- Mazoezi ya vitendo: Katika folder la [exercise.txt](../exercise.txt) utapata list ya maswali ambayo utafanya ili kupima uwezo wako.
 
 ## Content Types
 
