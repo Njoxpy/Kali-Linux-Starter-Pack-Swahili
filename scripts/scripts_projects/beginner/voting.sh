@@ -1,0 +1,1 @@
+# create a simple script to help a user vote
