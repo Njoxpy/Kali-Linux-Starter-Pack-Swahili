@@ -1,0 +1,84 @@
+site_name: Kali Linux Starter Pack (Swahili)
+site_url: https://github.com/Njoxpy/Kali-Linux-Starter-Pack-Swahili
+site_author: Njox Lee
+repo_url: https://github.com/Njoxpy/Kali-Linux-Starter-Pack-Swahili
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Swahili Guide: swahili-guide.md
+  - Process: process.md
+  - Exercises: exercise.md
+
+  - Scripts:
+      - Introduction: scripts/introduction.md
+      - Comments: scripts/comments.md
+      - Variables & Expressions: scripts/variables_and_expressions.md
+      - Conditionals: scripts/conditionals.md
+      - Loops: scripts/loops.md
+      - Functions: scripts/functions.md
+      - File Operations: scripts/file_operations.md
+      - Files & Directories: scripts/files_and_directories.md
+      - Input/Output Redirection: scripts/input_and_output_redirection.md
+      - Script Input/Output: scripts/script_input_and_output.md
+      - Error Handling: scripts/error_handling.md
+      - Text Processing: scripts/text_processing.md
+      - Arrays: scripts/arrays.md
+      - Projects:
+          - Folder Creation: scripts/scripts_projects/beginner/folder_creation.sh
+          - Git Automation: scripts/scripts_projects/beginner/git_automation.sh
+          - Voting Script: scripts/scripts_projects/beginner/voting.sh
+
+  - Tools:
+      - Tools Overview: tools/tools.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotation
+  palette:
+    - scheme: default
+      primary: "#4B8BBE"   # Python blue (also works nicely for Linux)
+      accent: "#306998"
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: "#4B8BBE"
+      accent: "#FFD43B"
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Njoxpy
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Njox16
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/godbless-nyagawa/
+
+copyright: |
+  &copy; 2025 <a href="https://github.com/Njoxpy" target="_blank" rel="noopener">Njoxpy</a>
